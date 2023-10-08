@@ -9,12 +9,13 @@ export default function App() {
   const speak = () => {
     const thingToSay = text;
     Speech.speak(thingToSay);
+    setText('');
   };
 
   return (
     <View style={styles.container}>
       <TextInput placeholder='Type to hear' onChangeText={text => setText(text)} value={text} />
-      <Button title="Press to hear some words" onPress={speak} />
+      <Button title="Press to hear text" onPress={speak} />
     </View>
   );
 }
